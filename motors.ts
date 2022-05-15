@@ -43,6 +43,7 @@ namespace kitronik_motor_driver {
                 switch (dir) {
                     case MotorDirection.Forward:
                         pins.analogWritePin(AnalogPin.P8, OutputVal);
+			pins.analogWritePin(AnalogPin.P1, 300);
                         pins.digitalWritePin(DigitalPin.P12, 0); /*Write the low side digitally, to allow the 3rd PWM to be used if required elsewhere*/
 			pins.digitalWritePin(DigitalPin.P13, 1);	
                         break
